@@ -5,34 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
   
   <title>Frontend Mentor | Loopstudios landing page</title>
-  <style>
-    .header{
-      background-color: blueviolet;
-    }
-
-    img{
-      width: 300px;
-    }
-  </style>
 
 </head>
 <body>
 
   <div class="container">
     <header class="header">
-      <img src="./images/logo.svg" alt="Loopstudios logo" class="header__logo">
+      
       <nav class="header__nav">
-        <ul class="header__list">
+        <img src="./images/logo.svg" alt="Loopstudios logo" class="header__logo">
+        <ul class="header__list hide">
           <li><a href="#">About</a></li>
           <li><a href="#">Careers</a></li>
           <li><a href="#">Events</a></li>
           <li><a href="#">Products</a></li>
           <li><a href="#">Support</a></li>
         </ul>
+        <img src="./images/icon-hamburger.svg" alt="icon-hamburger" class="header__hamburguer">
       </nav>
-      <img src="./images/icon-hamburger.svg" alt="icon-hamburger" class="header__hamburger">
+      
+      <h1 class="header__title">
+        Immersive experiences that deliver
+      </h1>
     </header>
     <main class="main">
       <section class="main__description">
