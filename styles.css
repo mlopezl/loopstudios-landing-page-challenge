@@ -42,10 +42,23 @@ body{
     gap: 150px;
 }
 
+.header__list{
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    display: none;
+}
+
+.header__list a{
+    text-decoration: none;
+    color: var(--White);
+    font-weight: 300;
+}
+
 .header__nav{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;   
 }
 
 .header__logo{
@@ -60,6 +73,7 @@ body{
 .header__title{
     width: 100%;
     padding: 20px;
+    line-height: 35px;
     max-width: 350px;
     border: 2px solid var(--White);
     color: var(--White);
@@ -82,6 +96,7 @@ body{
 
 .description__image{
     width: 85%;
+    max-width: 500px;
 }
 
 .description{
@@ -240,4 +255,55 @@ body{
 
 .hide{
     display: none;
+}
+
+@media (min-width: 426px){
+    .header{
+        background-image: url('./images/desktop/image-hero.jpg');
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .header::before{
+         content: "";
+         position: absolute;
+         inset: 0;
+         background: rgba(0, 0, 0, 0.3); /* Ajusta la opacidad */
+         z-index: 1;
+         height: 600px;
+    }
+
+    .header > * {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+@media (min-width: 769px){
+     .header{
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .header__logo{
+        width: 200px;
+    }
+
+     .header__list{
+        display: flex;
+    }
+
+    .header__hamburguer{
+        display: none;   
+    } 
+
+    .header__title{
+        padding: 30px;
+        line-height: 60px;
+        max-width: 550px;
+        height: 220px;
+        border: 2px solid var(--White);
+        font-size: 4rem;
+    }
+    
 }
