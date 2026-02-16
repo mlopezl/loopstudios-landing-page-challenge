@@ -54,6 +54,33 @@ body {
   font-weight: 300;
 }
 
+.header__list li {
+  position: relative;
+}
+
+.header__list span {
+  display: block;
+  width: 50%;
+  height: 1px;
+  background-color: transparent;
+  position: absolute;
+  bottom: -5px;
+  left: 25%;
+  transition: all 0.3s ease;
+}
+
+.header__list a:hover span,
+.header__list a:focus span {
+  width: 100%;
+  background-color: var(--White);
+  left: 0;
+  z-index: 1;
+}
+
+.header__list a:focus {
+  outline: none;
+}
+
 .header__nav {
   display: flex;
   justify-content: space-between;
@@ -157,10 +184,31 @@ body {
   max-width: 300px;
 }
 
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  height: 99%;
+  transition: all 300ms ease;
+}
+
+.card:hover,
+.card:focus {
+  cursor: pointer;
+  outline: none;
+}
+
+.card:hover::before,
+.card:focus::before {
+  background: hsl(0, 0%, 85%, 0.8);
+  outline: none;
+}
+
 .card__image {
   width: 100%;
   height: 100%;
-  filter: brightness(55%);
 }
 
 .card__title {
@@ -174,6 +222,12 @@ body {
   font-weight: 300;
   text-align: left;
   line-height: 20px;
+  z-index: 2;
+}
+
+.card:hover .card__title,
+.card:focus .card__title {
+  color: var(--Black);
 }
 
 .creation__button {
@@ -183,9 +237,6 @@ body {
   box-shadow: 0px 0px 2px 2px var(--Black);
   border: none;
   opacity: 70%;
-}
-
-.creation__button a {
   text-decoration: none;
   font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
@@ -193,6 +244,16 @@ body {
   font-weight: bold;
   font-size: 0.9rem;
   letter-spacing: 2px;
+  line-height: 40px;
+  transition: all 300ms ease;
+}
+
+.creation__button:hover,
+.creation__button:focus {
+  background-color: var(--Black);
+  opacity: 100%;
+  outline: none;
+  color: var(--White);
 }
 
 .creation__desktop {
@@ -259,6 +320,33 @@ body {
   list-style: none;
 }
 
+.footer__list li {
+  position: relative;
+}
+
+.footer__list span {
+  display: block;
+  width: 50%;
+  height: 1px;
+  background-color: transparent;
+  position: absolute;
+  bottom: -5px;
+  left: 25%;
+  transition: all 0.3s ease;
+}
+
+.footer__list a:hover span,
+.footer__list a:focus span {
+  width: 100%;
+  background-color: var(--White);
+  left: 0;
+  z-index: 1;
+}
+
+.footer__list a:focus {
+  outline: none;
+}
+
 .footer__list a {
   text-decoration: none;
   color: var(--White);
@@ -277,6 +365,55 @@ body {
   display: flex;
   gap: 10px;
   list-style: none;
+}
+
+.footer__social-list li {
+  position: relative;
+}
+
+.footer__social-list span {
+  display: block;
+  width: 50%;
+  height: 1px;
+  background-color: transparent;
+  position: absolute;
+  bottom: -5px;
+  left: 25%;
+  transition: all 0.3s ease;
+}
+
+.footer__social-list a:hover span,
+.footer__social-list a:focus span {
+  width: 100%;
+  background-color: var(--White);
+  left: 0;
+}
+
+.footer__social-list a:focus {
+  outline: none;
+}
+
+.header__list span {
+  display: block;
+  width: 50%;
+  height: 1px;
+  background-color: transparent;
+  position: absolute;
+  bottom: -5px;
+  left: 25%;
+  transition: all 0.3s ease;
+}
+
+.header__list a:hover span,
+.header__list a:focus span {
+  width: 100%;
+  background-color: var(--White);
+  left: 0;
+  z-index: 1;
+}
+
+.header__list a:focus {
+  outline: none;
 }
 
 .footer__social-list img {
