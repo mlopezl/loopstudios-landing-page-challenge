@@ -43,7 +43,7 @@
           <img
             src="./images/icon-hamburger.svg"
             alt="icon-hamburger"
-            class="header__hamburguer"
+            class="header__hamburger"
           />
         </nav>
 
@@ -51,7 +51,31 @@
           Immersive experiences <br />
           that deliver
         </h1>
+      
       </header>
+       <nav class="header__menu hide">
+          <header class="header__menu-header">
+            <img src="./images/logo.svg" alt="mobile logo" class="header__logo" />
+            <img src="./images/icon-close.svg" alt="close icon" class="header__close" />
+          </header>
+          <ul class="header__menu-list">
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Careers</a>
+            </li>
+            <li>
+              <a href="#">Events</a>
+            </li>
+            <li>
+              <a href="#">Products</a>
+            </li>
+            <li>
+              <a href="#">Support</a>
+            </li>
+          </ul>
+        </nav>
       <main class="main">
         <section class="main__description">
           <img
@@ -140,7 +164,7 @@
               <h3 class="card__title">Make it fisheye</h3>
             </article>
           </section>
-          <button class="creation__button"><a href="#">See all</a></button>
+          <a href="#" class="creation__button">See all</a>
         </section>
         <section class="creation creation__desktop">
           <header class="creation__header">
@@ -280,5 +304,6 @@
         </nav>
       </footer>
     </div>
+    <script src="./app.js"></script>
   </body>
 </html>
